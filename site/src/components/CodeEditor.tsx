@@ -44,6 +44,7 @@ export class CodeEditor extends React.Component<CodeEditorProps, CodeEditorState
       monacoEditor.languages.typescript.typescriptDefaults.setCompilerOptions({
         target: monacoEditor.languages.typescript.ScriptTarget.ESNext,
         allowNonTsExtensions: true,
+        experimentalDecorators: true
       });
 
       reactMonacoEditorPromise.then(editor => {
